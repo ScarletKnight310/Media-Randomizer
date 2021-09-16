@@ -1,8 +1,6 @@
-from PyQt5.QtWidgets import QLabel
-
 from core import AnigaRan
-
 from PyQt5 import QtCore, QtGui, QtWidgets
+from core.InfoExtract import extractTitle
 
 
 class Ui_MainWindow(object):
@@ -24,7 +22,7 @@ class Ui_MainWindow(object):
         self.animeButton.setFont(font)
         self.animeButton.setObjectName("animeButton")
         self.titleLabel = QtWidgets.QLabel(self.centralwidget)
-        self.titleLabel.setGeometry(QtCore.QRect(20, 20, 261, 81))
+        self.titleLabel.setGeometry(QtCore.QRect(20, 20, 400, 81))
         font = QtGui.QFont()
         font.setPointSize(20)
         self.titleLabel.setFont(font)
@@ -82,11 +80,14 @@ class Ui_MainWindow(object):
         self.titleLabel.setText("Random Manga")
         m = AnigaRan.randomAnime()
         self.mediaLink.setText(m)
+        self.mediaName.setText(extractTitle(m))
+
 
     def randomAnime(self):
         self.titleLabel.setText("Random Anime")
         a = AnigaRan.randomAnime()
         self.mediaLink.setText(a)
+        self.mediaName.setText(extractTitle(a))
 
 
 if __name__ == "__main__":
