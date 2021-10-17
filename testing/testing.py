@@ -2,11 +2,15 @@ from bs4 import *
 import requests
 import os
 
-# TEXT TESTING =-----------------------------------
-from core.InfoExtract import extractText, extractTitle
+# pyuic5 –x "filename".ui –o "filename".py
+from core.InfoExtract import extractDesc, extractText
 
-title = extractTitle("https://myanimelist.net/anime/41487/Tensei_shitara_Slime_Datta_Ken_2nd_Season_Part_2")
-print(title)
+allText = extractDesc("https://myanimelist.net/anime/21")
+print(allText)
+#cou = 0
+#for s in allText:
+#    print("[[" + str(cou) + "]] " + s)
+#    cou += 1
 
 
 # IMAGE TESTING--------------------------------
