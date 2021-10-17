@@ -1,2 +1,2 @@
 # Media-Randomizer
- A simple program, select an entertainment type (Manga, Anime, Games, Movies, etc.) then run the program. Should output a random title of the selected group.  (WIP)
+A program where you can select an entertainment type (Manga, Anime, Games, Movies, etc.) run the program, then receive information on a random title in the specified entertainment type.  (WIP)
